@@ -25,19 +25,10 @@ All operations (except matrix comparison) should return the resulting code:
 - 1 - Error, incorrect matrix
 - 2 - Calculation error (mismatched matrix sizes; matrix for which calculations cannot be performed, etc.)
 
-## Creating matrices (create_matrix)
-
 ```c
 int castom_create_matrix(int rows, int columns, matrix_t *result);
-```
-
-## Cleaning of matrices (remove_matrix)
-
-```c
 void castom_remove_matrix(matrix_t *A);
 ```
-
-## Matrix comparison (eq_matrix)
 
 ```c
 #define SUCCESS 1
@@ -46,41 +37,14 @@ void castom_remove_matrix(matrix_t *A);
 int castom_eq_matrix(matrix_t *A, matrix_t *B);
 ```
 
-## Adding (sum_matrix) and subtracting matrices (sub_matrix)
-
 ```c
 int castom_sum_matrix(matrix_t *A, matrix_t *B, matrix_t *result);
 int castom_sub_matrix(matrix_t *A, matrix_t *B, matrix_t *result);
-```
-
-## Matrix multiplication by scalar (mult_number). Multiplication of two matrices (mult_matrix)
-
-```c
 int castom_mult_number(matrix_t *A, double number, matrix_t *result);
 int castom_mult_matrix(matrix_t *A, matrix_t *B, matrix_t *result);
-```
-
-## Matrix transpose (transpose)
-
-```c
 int castom_transpose(matrix_t *A, matrix_t *result);
-```
-
-## Minor of matrix and matrix of algebraic complements (calc_complements)
-
-```c
 int castom_calc_complements(matrix_t *A, matrix_t *result);
-```
-
-## Matrix determinant
-
-```c
 int castom_determinant(matrix_t *A, double *result);
-```
-
-## Inverse of the matrix (inverse_matrix)
-
-```c
 int castom_inverse_matrix(matrix_t *A, matrix_t *result);
 ```
 
